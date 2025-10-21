@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatBreeding.Core", "CatBreeding.Core.csproj", "{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatBreeding.Core.Tests", "..\CatBreeding.Core.Tests\CatBreeding.Core.Tests.csproj", "{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CF27921-7C29-46AC-9F90-F06ADF895B9F}
+	EndGlobalSection
+EndGlobal
