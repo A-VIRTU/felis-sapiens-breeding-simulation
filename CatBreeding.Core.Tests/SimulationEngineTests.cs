@@ -98,7 +98,6 @@ namespace CatBreeding.Core.Tests
             {
                 TotalGenerationsToSimulate = 10,
                 InitialPopulationSize = 1, // Větší počáteční populace
-                InheritanceMutationStdDev = 0.5, // Větší mutace pro rychlejší efekt
                 MaxBreedingFemales = 2
             };
 

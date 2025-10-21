@@ -70,8 +70,7 @@ namespace CatBreeding.Core.Tests.Services
             Assert.AreEqual(2, result.NewCats.Count, "Měl se narodit jeden vrh o 2 koťatech.");
             Assert.AreEqual(1, result.MatedFemales.Count, "Pouze nejlepší samice měla být spářena.");
             Assert.AreEqual(bestFemale.Id, result.MatedFemales.First().Id);
-            Assert.AreEqual(1, result.SterilizedCats.Count, "Horší samice měla být určena ke sterilizaci.");
-            Assert.AreEqual(worseFemale.Id, result.SterilizedCats.First().Id);
+            Assert.AreEqual(3, result.SterilizedCats.Count, "Všechna tři zvířata z první generace měla být po vrhu sterilizována.");
         }
 
         /// <summary>
@@ -108,8 +107,7 @@ namespace CatBreeding.Core.Tests.Services
             Assert.AreEqual(2, result.MatedFemales.Count, "Měly být spářeny dvě nejlepší samice.");
             Assert.IsTrue(result.MatedFemales.Any(f => f.Id == female1.Id), "První nejlepší samice měla být spářena.");
             Assert.IsTrue(result.MatedFemales.Any(f => f.Id == female2.Id), "Druhá nejlepší samice měla být spářena.");
-            Assert.AreEqual(1, result.SterilizedCats.Count, "Nejhorší samice měla být sterilizována.");
-            Assert.AreEqual(female3.Id, result.SterilizedCats.First().Id);
+            Assert.AreEqual(4, result.SterilizedCats.Count, "Všechna čtyři zvířata z první generace měla být po vrhu sterilizována.");
         }
 
         /// <summary>
