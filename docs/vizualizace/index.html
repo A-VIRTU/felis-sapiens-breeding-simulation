@@ -37,6 +37,36 @@
         </div>
 
         <script>
+            function formatRarity(iqValue) {
+                const Z = (iqValue - 100) / 15;
+                if (Z <= 0) return ''; 
+                
+                let t = 1 / (1 + 0.2316419 * Math.abs(Z));
+                let d = 0.3989423 * Math.exp(-Z * Z / 2);
+                let p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+                let P = Z > 0 ? 1 - p : p;
+                
+                let N = P / (1 - P);
+                if (N < 1) return "";
+                if (N >= 1000000) return `1 : ${(N/1000000).toFixed(1)}M`;
+                if (N >= 1000) return `1 : ${(N/1000).toFixed(1)}k`;
+                return `1 : ${Math.round(N)}`;
+            }
+
+            const rarityAxisConfig = {
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                title: { display: true, text: 'Vzácnost (1 : N horších)', color: '#94a3b8' },
+                ticks: {
+                    color: '#94a3b8',
+                    callback: function(value, index, ticks) { return formatRarity(value); }
+                },
+                afterDataLimits: (scale) => {
+                    scale.min = scale.chart.scales.y.min;
+                    scale.max = scale.chart.scales.y.max;
+                }
+            };
+
             const labels = simulationData.ElitistData.map(d => `Gen ${d.Generation}`);
 
             // === 1. IQ Chart ===
@@ -78,7 +108,8 @@
                     responsive: true,
                     plugins: { legend: { labels: { color: '#f8fafc' } } },
                     scales: {
-                        y: { ticks: { color: '#94a3b8' }, title: { display: true, text: 'Kočičí IQ (Kvocient)', color: '#94a3b8' } },
+                        y: { position: 'left', ticks: { color: '#94a3b8' }, title: { display: true, text: 'Kočičí IQ (Kvocient)', color: '#94a3b8' } },
+                        yRarity: rarityAxisConfig,
                         x: { ticks: { color: '#94a3b8' } }
                     }
                 }
@@ -162,7 +193,8 @@
                     responsive: true,
                     plugins: { legend: { labels: { color: '#f8fafc' } } },
                     scales: {
-                        y: { ticks: { color: '#94a3b8' }, title: { display: true, text: 'Průměrné IQ populace', color: '#94a3b8' } },
+                        y: { position: 'left', ticks: { color: '#94a3b8' }, title: { display: true, text: 'Průměrné IQ populace', color: '#94a3b8' } },
+                        yRarity: rarityAxisConfig,
                         x: { ticks: { color: '#94a3b8' } }
                     }
                 }
