@@ -30,6 +30,10 @@
                 <h2>Ochrana Genetické Diverzity (Rozptyl)</h2>
                 <canvas id="diversityChart"></canvas>
             </div>
+            <div class="col chart-wrapper">
+                <h2>Růst Průměrného IQ (Celá populace)</h2>
+                <canvas id="avgIqChart"></canvas>
+            </div>
         </div>
 
         <script>
@@ -119,6 +123,46 @@
                     plugins: { legend: { labels: { color: '#f8fafc' } } },
                     scales: {
                         y: { ticks: { color: '#94a3b8' }, title: { display: true, text: 'StdDev Populace (Variabilita)', color: '#94a3b8' } },
+                        x: { ticks: { color: '#94a3b8' } }
+                    }
+                }
+            });
+
+            // === 3. Average IQ Chart ===
+            new Chart(document.getElementById('avgIqChart'), {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Elitist (100% Inbreeding)',
+                            data: simulationData.ElitistData.map(d => d.MedianAvgIq),
+                            borderColor: '#fbbf24',
+                            borderDash: [2, 2],
+                            borderWidth: 2,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Half-Inbreeding',
+                            data: simulationData.HalfInbreedingData.map(d => d.MedianAvgIq),
+                            borderColor: '#38bdf8',
+                            borderWidth: 2,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Outcross',
+                            data: simulationData.OutcrossData.map(d => d.MedianAvgIq),
+                            borderColor: '#84cc16',
+                            borderWidth: 2,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { labels: { color: '#f8fafc' } } },
+                    scales: {
+                        y: { ticks: { color: '#94a3b8' }, title: { display: true, text: 'Průměrné IQ populace', color: '#94a3b8' } },
                         x: { ticks: { color: '#94a3b8' } }
                     }
                 }
