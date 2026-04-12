@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <h1>Felis Sapiens: Simulace Kognitivní Evoluce</h1>
-        <p style="text-align:center; color:#94a3b8; margin-bottom:40px;">Porovnání čistého Elitismu a Half-Inbreeding strategie (100 simulačních běhů)</p>
+        <p style="text-align:center; color:#94a3b8; margin-bottom:40px;">Porovnání: čistý Elitismus vs Half-Inbreeding vs Outcross (100 běhů)</p>
         
         <!-- Přejímá ex-testem vygenerovaná data -->
         <script src="data.js"></script>
@@ -58,6 +58,15 @@
                             borderWidth: 3,
                             fill: true,
                             tension: 0.4
+                        },
+                        {
+                            label: 'Outcross (Plný Outcross)',
+                            data: simulationData.OutcrossData.map(d => d.MedianMaxIq),
+                            borderColor: '#84cc16',
+                            backgroundColor: 'rgba(132, 204, 22, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
                         }
                     ]
                 },
@@ -92,6 +101,15 @@
                             borderWidth: 3,
                             fill: true,
                             backgroundColor: 'rgba(56, 189, 248, 0.2)',
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Outcross Diversity',
+                            data: simulationData.OutcrossData.map(d => d.MedianGeneticDiversity),
+                            borderColor: '#84cc16',
+                            borderWidth: 3,
+                            fill: true,
+                            backgroundColor: 'rgba(132, 204, 22, 0.2)',
                             tension: 0.4
                         }
                     ]

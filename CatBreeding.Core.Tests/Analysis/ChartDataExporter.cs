@@ -26,6 +26,7 @@ namespace CatBreeding.Core.Tests.Analysis
         {
             public List<GenerationMetric> ElitistData { get; set; } = new List<GenerationMetric>();
             public List<GenerationMetric> HalfInbreedingData { get; set; } = new List<GenerationMetric>();
+            public List<GenerationMetric> OutcrossData { get; set; } = new List<GenerationMetric>();
         }
 
         [TestMethod]
@@ -47,8 +48,9 @@ namespace CatBreeding.Core.Tests.Analysis
 
             var exportData = new ExportData();
 
-            exportData.ElitistData = RunStrategy(options, numberOfRuns, generationsToSimulate, true);
-            exportData.HalfInbreedingData = RunStrategy(options, numberOfRuns, generationsToSimulate, false);
+            exportData.ElitistData = RunStrategy(options, numberOfRuns, generationsToSimulate, "Elitist");
+            exportData.HalfInbreedingData = RunStrategy(options, numberOfRuns, generationsToSimulate, "HalfInbreeding");
+            exportData.OutcrossData = RunStrategy(options, numberOfRuns, generationsToSimulate, "Outcross");
 
             string docsDir = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\docs\vizualizace"));
             Directory.CreateDirectory(docsDir);
@@ -60,7 +62,7 @@ namespace CatBreeding.Core.Tests.Analysis
             File.WriteAllText(Path.Combine(docsDir, "data.js"), jsContent);
         }
 
-        private List<GenerationMetric> RunStrategy(BreedingSimulationOptions options, int numberOfRuns, int maxGen, bool useElitist)
+        private List<GenerationMetric> RunStrategy(BreedingSimulationOptions options, int numberOfRuns, int maxGen, string strategyType)
         {
             var randomProvider = new MathNetGaussianRandomProvider();
             var fitnessCalculator = new MeanTraitFitnessCalculator(options);
@@ -70,9 +72,13 @@ namespace CatBreeding.Core.Tests.Analysis
 
             for (int i = 0; i < numberOfRuns; i++)
             {
-                IBreedingStrategy strategy = useElitist 
-                    ? new ElitistBreedingStrategy(options, fitnessCalculator, randomProvider)
-                    : new HalfInbreedingBreedingStrategy(options, fitnessCalculator, randomProvider);
+                IBreedingStrategy strategy;
+                if (strategyType == "Elitist")
+                    strategy = new ElitistBreedingStrategy(options, fitnessCalculator, randomProvider);
+                else if (strategyType == "Outcross")
+                    strategy = new OutcrossBreedingStrategy(options, fitnessCalculator, randomProvider);
+                else
+                    strategy = new HalfInbreedingBreedingStrategy(options, fitnessCalculator, randomProvider);
 
                 var engine = new SimulationEngine(options, fitnessCalculator, strategy, randomProvider);
                 allReports.Add(engine.RunSingleSimulation());
