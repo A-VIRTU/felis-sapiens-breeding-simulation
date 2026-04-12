@@ -50,7 +50,7 @@ namespace CatBreeding.Core.Tests.Analysis
             exportData.ElitistData = RunStrategy(options, numberOfRuns, generationsToSimulate, true);
             exportData.HalfInbreedingData = RunStrategy(options, numberOfRuns, generationsToSimulate, false);
 
-            string docsDir = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\..\docs\vizualizace"));
+            string docsDir = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\docs\vizualizace"));
             Directory.CreateDirectory(docsDir);
 
             string json = JsonSerializer.Serialize(exportData, new JsonSerializerOptions { WriteIndented = true });
