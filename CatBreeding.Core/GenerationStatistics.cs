@@ -11,7 +11,17 @@ namespace CatBreeding.Core
         public double MinFitness { get; set; }
         public double MaxFitness { get; set; }
         public double AverageFitnessQuotient { get; set; }
-        public Dictionary<int, double> FitnessPercentiles { get; set; } = new Dictionary<int, double>();
+
+        /// <summary>
+        /// The standardized quotient of the weakest individual in this generation.
+        /// </summary>
+        public double MinFitnessQuotient { get; set; }
+
+        /// <summary>
+        /// The standardized quotient of the strongest individual in this generation.
+        /// </summary>
+        public double MaxFitnessQuotient { get; set; }
+
         public int PopulationSize { get; set; }
     }
 }

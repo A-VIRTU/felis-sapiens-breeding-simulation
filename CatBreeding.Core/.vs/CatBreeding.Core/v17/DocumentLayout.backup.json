@@ -1,0 +1,464 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\analysis\\cognitivescale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:analysis\\cognitivescale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\analysis\\fitnessconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:analysis\\fitnessconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}|..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core.tests\\simulationenginetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}|..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core.tests\\analysis\\simulationintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}|..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core.tests\\analysis\\fitnessconverterhumanequivalenttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\generationstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:generationstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\simulationengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:simulationengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\breedingsimulationoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:breedingsimulationoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}|..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core.tests\\analysis\\fitnessconvertertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\finalreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:finalreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\services\\elitistbreedingstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:services\\elitistbreedingstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}|..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core.tests\\services\\elitistbreedingstrategytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\services\\mathnetgaussianrandomprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:services\\mathnetgaussianrandomprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\services\\igaussianrandomprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:services\\igaussianrandomprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\domain\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:domain\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}|..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core.tests\\simulationengineinitialpopulationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\services\\breedingresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:services\\breedingresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\services\\ibreedingstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:services\\ibreedingstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\services\\ifitnesscalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:services\\ifitnesscalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\domain\\cattery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:domain\\cattery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}|..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core.tests\\services\\meanfitnesscalculatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA6B24-3D5E-45A4-AB2D-D367C5EC095C}|..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core.tests\\catbreeding.core.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\domain\\traitvector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:domain\\traitvector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\simulationrun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:simulationrun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\services\\meantraitfitnesscalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:services\\meantraitfitnesscalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|c:\\users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\catbreeding.core\\domain\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C08A2222-ADBF-4EA8-8DE2-676BE06AFAF6}|CatBreeding.Core.csproj|solutionrelative:domain\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CognitiveScale.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Analysis\\CognitiveScale.cs",
+              "RelativeDocumentMoniker": "Analysis\\CognitiveScale.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Analysis\\CognitiveScale.cs",
+              "RelativeToolTip": "Analysis\\CognitiveScale.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T15:16:40.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SimulationIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Analysis\\SimulationIntegrationTests.cs",
+              "RelativeDocumentMoniker": "..\\CatBreeding.Core.Tests\\Analysis\\SimulationIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Analysis\\SimulationIntegrationTests.cs",
+              "RelativeToolTip": "..\\CatBreeding.Core.Tests\\Analysis\\SimulationIntegrationTests.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAswEkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T13:32:29.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FitnessConverterHumanEquivalentTests.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Analysis\\FitnessConverterHumanEquivalentTests.cs",
+              "RelativeDocumentMoniker": "..\\CatBreeding.Core.Tests\\Analysis\\FitnessConverterHumanEquivalentTests.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Analysis\\FitnessConverterHumanEquivalentTests.cs",
+              "RelativeToolTip": "..\\CatBreeding.Core.Tests\\Analysis\\FitnessConverterHumanEquivalentTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T11:19:45.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SimulationEngineTests.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\SimulationEngineTests.cs",
+              "RelativeDocumentMoniker": "..\\CatBreeding.Core.Tests\\SimulationEngineTests.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\SimulationEngineTests.cs",
+              "RelativeToolTip": "..\\CatBreeding.Core.Tests\\SimulationEngineTests.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAuwF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T12:38:57.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GenerationStatistics.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\GenerationStatistics.cs",
+              "RelativeDocumentMoniker": "GenerationStatistics.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\GenerationStatistics.cs*",
+              "RelativeToolTip": "GenerationStatistics.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:06:50.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SimulationEngine.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\SimulationEngine.cs",
+              "RelativeDocumentMoniker": "SimulationEngine.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\SimulationEngine.cs",
+              "RelativeToolTip": "SimulationEngine.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAtwEAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:05:19.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BreedingSimulationOptions.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\BreedingSimulationOptions.cs",
+              "RelativeDocumentMoniker": "BreedingSimulationOptions.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\BreedingSimulationOptions.cs",
+              "RelativeToolTip": "BreedingSimulationOptions.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADgvxYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:57:09.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FitnessConverter.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Analysis\\FitnessConverter.cs",
+              "RelativeDocumentMoniker": "Analysis\\FitnessConverter.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Analysis\\FitnessConverter.cs",
+              "RelativeToolTip": "Analysis\\FitnessConverter.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:06:01.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FitnessConverterTests.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Analysis\\FitnessConverterTests.cs",
+              "RelativeDocumentMoniker": "..\\CatBreeding.Core.Tests\\Analysis\\FitnessConverterTests.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Analysis\\FitnessConverterTests.cs",
+              "RelativeToolTip": "..\\CatBreeding.Core.Tests\\Analysis\\FitnessConverterTests.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:25:33.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FinalReport.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\FinalReport.cs",
+              "RelativeDocumentMoniker": "FinalReport.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\FinalReport.cs",
+              "RelativeToolTip": "FinalReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:54:28.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ElitistBreedingStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\ElitistBreedingStrategy.cs",
+              "RelativeDocumentMoniker": "Services\\ElitistBreedingStrategy.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\ElitistBreedingStrategy.cs",
+              "RelativeToolTip": "Services\\ElitistBreedingStrategy.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowC4AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:03:28.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ElitistBreedingStrategyTests.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Services\\ElitistBreedingStrategyTests.cs",
+              "RelativeDocumentMoniker": "..\\CatBreeding.Core.Tests\\Services\\ElitistBreedingStrategyTests.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Services\\ElitistBreedingStrategyTests.cs",
+              "RelativeToolTip": "..\\CatBreeding.Core.Tests\\Services\\ElitistBreedingStrategyTests.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAxwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:32:58.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MathNetGaussianRandomProvider.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\MathNetGaussianRandomProvider.cs",
+              "RelativeDocumentMoniker": "Services\\MathNetGaussianRandomProvider.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\MathNetGaussianRandomProvider.cs",
+              "RelativeToolTip": "Services\\MathNetGaussianRandomProvider.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:58:34.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IGaussianRandomProvider.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\IGaussianRandomProvider.cs",
+              "RelativeDocumentMoniker": "Services\\IGaussianRandomProvider.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\IGaussianRandomProvider.cs",
+              "RelativeToolTip": "Services\\IGaussianRandomProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:58:12.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cat.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Domain\\Cat.cs",
+              "RelativeDocumentMoniker": "Domain\\Cat.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Domain\\Cat.cs",
+              "RelativeToolTip": "Domain\\Cat.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwA8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:56:06.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BreedingResult.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\BreedingResult.cs",
+              "RelativeDocumentMoniker": "Services\\BreedingResult.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\BreedingResult.cs",
+              "RelativeToolTip": "Services\\BreedingResult.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAewBIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:59:29.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SimulationEngineInitialPopulationTests.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\SimulationEngineInitialPopulationTests.cs",
+              "RelativeDocumentMoniker": "..\\CatBreeding.Core.Tests\\SimulationEngineInitialPopulationTests.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\SimulationEngineInitialPopulationTests.cs",
+              "RelativeToolTip": "..\\CatBreeding.Core.Tests\\SimulationEngineInitialPopulationTests.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T19:04:48.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IBreedingStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\IBreedingStrategy.cs",
+              "RelativeDocumentMoniker": "Services\\IBreedingStrategy.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\IBreedingStrategy.cs",
+              "RelativeToolTip": "Services\\IBreedingStrategy.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:02:50.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IFitnessCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\IFitnessCalculator.cs",
+              "RelativeDocumentMoniker": "Services\\IFitnessCalculator.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\IFitnessCalculator.cs",
+              "RelativeToolTip": "Services\\IFitnessCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:01:43.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Cattery.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Domain\\Cattery.cs",
+              "RelativeDocumentMoniker": "Domain\\Cattery.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Domain\\Cattery.cs",
+              "RelativeToolTip": "Domain\\Cattery.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:56:44.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MeanFitnessCalculatorTests.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Services\\MeanFitnessCalculatorTests.cs",
+              "RelativeDocumentMoniker": "..\\CatBreeding.Core.Tests\\Services\\MeanFitnessCalculatorTests.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\Services\\MeanFitnessCalculatorTests.cs",
+              "RelativeToolTip": "..\\CatBreeding.Core.Tests\\Services\\MeanFitnessCalculatorTests.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:28:03.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CatBreeding.Core.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj",
+              "RelativeDocumentMoniker": "..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj",
+              "RelativeToolTip": "..\\CatBreeding.Core.Tests\\CatBreeding.Core.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-20T11:27:41.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SimulationRun.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\SimulationRun.cs",
+              "RelativeDocumentMoniker": "SimulationRun.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\SimulationRun.cs",
+              "RelativeToolTip": "SimulationRun.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:04:04.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TraitVector.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Domain\\TraitVector.cs",
+              "RelativeDocumentMoniker": "Domain\\TraitVector.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Domain\\TraitVector.cs",
+              "RelativeToolTip": "Domain\\TraitVector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:55:44.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MeanTraitFitnessCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\MeanTraitFitnessCalculator.cs",
+              "RelativeDocumentMoniker": "Services\\MeanTraitFitnessCalculator.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Services\\MeanTraitFitnessCalculator.cs",
+              "RelativeToolTip": "Services\\MeanTraitFitnessCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:02:10.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Domain\\Enums.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums.cs",
+              "ToolTip": "C:\\Users\\vikto\\source\\repos\\felis-sapiens-breeding-simulation\\CatBreeding.Core\\Domain\\Enums.cs",
+              "RelativeToolTip": "Domain\\Enums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:55:20.338Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -15,6 +15,7 @@ namespace CatBreeding.Core
         public TimeSpan CatFertilityAge { get; set; } = TimeSpan.FromDays(30 * 6);
         public TimeSpan MortalityHalfLife { get; set; } = TimeSpan.FromDays(30 * 18);
         public int TotalGenerationsToSimulate { get; set; } = 10;
+        public bool StopWhenAllCatsDies { get; internal set; } = false;
         public int MaxBreedingFemales { get; set; } = 2;
         public int MaxBreedingMales { get; set; } = 1;
         public double LitterSizeMean { get; set; } = 4.5;

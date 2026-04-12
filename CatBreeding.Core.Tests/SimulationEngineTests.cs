@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 
 namespace CatBreeding.Core.Tests
-{ 
+{
     [TestClass]
     public class SimulationEngineTests
     {
@@ -97,7 +97,7 @@ namespace CatBreeding.Core.Tests
             var options = new BreedingSimulationOptions
             {
                 TotalGenerationsToSimulate = 10,
-                InitialPopulationSize = 1, // Větší počáteční populace
+                InitialPopulationSize = 1, 
                 MaxBreedingFemales = 2
             };
 

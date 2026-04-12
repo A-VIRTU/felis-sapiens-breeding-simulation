@@ -62,7 +62,7 @@ namespace CatBreeding.Core
 
                 SimulateMortality(run.Cattery);
 
-                if (!run.Cattery.AllCats.Any())
+                if (_options.StopWhenAllCatsDies && !run.Cattery.AllCats.Any())
                 {
                     break; // Populace vymřela
                 }
@@ -143,15 +143,19 @@ namespace CatBreeding.Core
             double sumOfSquares = fitnessValues.Select(f => (f - avgFitness) * (f - avgFitness)).Sum();
             double stdDev = fitnessValues.Count > 1 ? Math.Sqrt(sumOfSquares / (fitnessValues.Count - 1)) : 0;
 
+            double minFitness = fitnessValues.Min();
+            double maxFitness = fitnessValues.Max();
             run.GenerationalStats.Add(new GenerationStatistics
             {
                 GenerationNumber = generationNumber,
                 AverageFitness = avgFitness,
                 FitnessStdDev = stdDev,
-                MinFitness = fitnessValues.Min(),
-                MaxFitness = fitnessValues.Max(),
+                MinFitness = minFitness,
+                MaxFitness = maxFitness,
                 PopulationSize = relevantPopulation.Count, // Velikost vrhu, ne celého chovu
-                AverageFitnessQuotient = FitnessConverter.ConvertToQuotient(avgFitness)
+                AverageFitnessQuotient = FitnessConverter.ConvertToQuotient(avgFitness),
+                MinFitnessQuotient = FitnessConverter.ConvertToQuotient(minFitness),
+                MaxFitnessQuotient = FitnessConverter.ConvertToQuotient(maxFitness)
             });
         }
     }
