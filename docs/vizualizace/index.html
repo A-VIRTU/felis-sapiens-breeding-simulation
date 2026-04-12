@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Strategie Šlechtění Felis Sapiens</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; color: #38bdf8; }
+        .chart-wrapper { background: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .row { display: flex; gap: 20px; flex-wrap: wrap; }
+        .col { flex: 1; min-width: 500px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Felis Sapiens: Simulace Kognitivní Evoluce</h1>
+        <p style="text-align:center; color:#94a3b8; margin-bottom:40px;">Porovnání čistého Elitismu a Half-Inbreeding strategie (100 simulačních běhů)</p>
+        
+        <!-- Přejímá ex-testem vygenerovaná data -->
+        <script src="data.js"></script>
+
+        <div class="row">
+            <div class="col chart-wrapper">
+                <h2>Růst Mediánu Max IQ (Generace 1-7)</h2>
+                <canvas id="iqChart"></canvas>
+            </div>
+            <div class="col chart-wrapper">
+                <h2>Ochrana Genetické Diverzity (Rozptyl)</h2>
+                <canvas id="diversityChart"></canvas>
+            </div>
+        </div>
+
+        <script>
+            const labels = simulationData.ElitistData.map(d => `Gen ${d.Generation}`);
+
+            // === 1. IQ Chart ===
+            new Chart(document.getElementById('iqChart'), {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Elitist (100% Inbreeding)',
+                            data: simulationData.ElitistData.map(d => d.MedianMaxIq),
+                            borderColor: '#fbbf24',
+                            backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Half-Inbreeding (50% Outcross)',
+                            data: simulationData.HalfInbreedingData.map(d => d.MedianMaxIq),
+                            borderColor: '#38bdf8',
+                            backgroundColor: 'rgba(56, 189, 248, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { labels: { color: '#f8fafc' } } },
+                    scales: {
+                        y: { ticks: { color: '#94a3b8' }, title: { display: true, text: 'Kočičí IQ (Kvocient)', color: '#94a3b8' } },
+                        x: { ticks: { color: '#94a3b8' } }
+                    }
+                }
+            });
+
+            // === 2. Diversity Chart ===
+            new Chart(document.getElementById('diversityChart'), {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Elitist Diversity',
+                            data: simulationData.ElitistData.map(d => d.MedianGeneticDiversity),
+                            borderColor: '#fbbf24',
+                            borderDash: [5, 5],
+                            borderWidth: 2,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Half-Inbreeding Diversity',
+                            data: simulationData.HalfInbreedingData.map(d => d.MedianGeneticDiversity),
+                            borderColor: '#38bdf8',
+                            borderWidth: 3,
+                            fill: true,
+                            backgroundColor: 'rgba(56, 189, 248, 0.2)',
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { labels: { color: '#f8fafc' } } },
+                    scales: {
+                        y: { ticks: { color: '#94a3b8' }, title: { display: true, text: 'StdDev Populace (Variabilita)', color: '#94a3b8' } },
+                        x: { ticks: { color: '#94a3b8' } }
+                    }
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
