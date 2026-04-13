@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 msgPhase4.innerHTML = `
                 <div style="background-color: rgba(164, 119, 100, 0.1); border: 1px solid rgba(164, 119, 100, 0.3); padding: var(--space-xl) var(--space-md); margin-bottom: var(--space-md); border-radius: 4px; text-align: center;">
                     <strong style="color: var(--color-accent); display: block; margin-bottom: 10px; font-size: var(--text-lg); font-family: var(--font-serif);">Dossier Officially Secured.</strong>
-                    <span style="color: var(--color-text); font-size: var(--text-sm);">Thank you. Your behavioral responses and contextual framework are successfully preserved in the local cache.<br><br>We treat all subjective data with uncompromising ethical standards. You may now finalize your inquiry by forwarding this intent directly to:<br><strong style="font-size: var(--text-md); margin-top: 10px; display: block; letter-spacing: 1px;">protocol@felis-sapiens.com</strong></span>
+                    <span style="color: var(--color-text); font-size: var(--text-sm);">Thank you. Your behavioral responses and contextual framework are successfully preserved in the local cache.<br><br>We treat all subjective data with uncompromising ethical standards. Formal registry processing and all subsequent communication is currently handled strictly manually by humans.<br><br>You may now finalize your inquiry by forwarding this intent directly to:<br><strong style="font-size: var(--text-md); margin-top: 10px; display: block; letter-spacing: 1px;">protocol@felis-sapiens.com</strong></span>
                 </div>`;
             }
         }
@@ -189,22 +189,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function validatePhase(stepEl) {
+        const reqs = stepEl.querySelectorAll('.form-control[required]');
+        for (const el of reqs) {
+            if (!el.value.trim()) {
+                el.reportValidity();
+                return false;
+            }
+        }
+        return true;
+    }
+
     // Initialize on load
     if (step1) {
         renderPhase(getPhase(), true);
         
         if (btnSubmit1) btnSubmit1.addEventListener('click', () => {
+            if (!validatePhase(step1)) return;
             saveApplicantName();
             setPhase('2');
             renderPhase('2');
         });
         
         if (btnBack1) btnBack1.addEventListener('click', () => {
+            // Retain name if they go back
             setPhase('1');
             renderPhase('1');
         });
 
         if (btnSubmit2) btnSubmit2.addEventListener('click', () => {
+            if (!validatePhase(step2)) return;
             setPhase('3');
             renderPhase('3');
         });
@@ -215,6 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         if (btnSubmit3) btnSubmit3.addEventListener('click', () => {
+            if (!validatePhase(step3)) return;
             setPhase('4');
             renderPhase('4');
         });
