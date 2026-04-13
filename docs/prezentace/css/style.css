@@ -882,21 +882,21 @@ textarea.form-control {
 
 .anim-fade-in-1 {
   opacity: 0;
-  animation: cinematicTextFade 1s var(--ease-cinematic) 0.2s forwards;
+  animation: cinematicTextFade 2s var(--ease-cinematic) 0.5s forwards;
 }
 .anim-line-1 {
   opacity: 0;
-  animation: cinematicTextFade 1.2s var(--ease-cinematic) 0.8s forwards;
+  animation: cinematicTextFade 3s var(--ease-cinematic) 1.5s forwards;
 }
 .anim-line-2 {
   opacity: 0;
-  animation: cinematicTextFade 1.2s var(--ease-cinematic) 2.2s forwards;
+  animation: cinematicTextFade 3s var(--ease-cinematic) 3.5s forwards;
 }
 .anim-fade-in-2 {
   opacity: 0;
-  animation: cinematicTextFade 1s var(--ease-cinematic) 3.5s forwards;
+  animation: cinematicTextFade 2.5s var(--ease-cinematic) 6.0s forwards;
 }
 .hero .large-logo-bg.anim-logo {
   opacity: 0;
-  animation: cinematicLogoFade 2s var(--ease-cinematic) 4.5s forwards;
+  animation: cinematicLogoFade 4s var(--ease-cinematic) 7.5s forwards;
 }
