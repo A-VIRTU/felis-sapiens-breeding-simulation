@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (step3) step3.style.display = 'block';
             if (dossierIntro) {
                 const greeting = applicantName ? `Thank you, ${applicantName}, for detailing` : 'Thank you for detailing';
-                dossierIntro.innerHTML = `${greeting} your environment. We are truly reading every word and appreciate your transparency. As our absolute final step, we kindly ask you to share your broader philosophy and expectations. This helps us ensure the perfect, seamless synergy between you and the feline intellect.`;
+                dossierIntro.innerHTML = `${greeting} your environment. We are truly reading every word and appreciate your transparency. As a final step, we kindly ask you to share your broader philosophy and expectations. This helps us ensure the perfect, seamless synergy between you and the feline intellect.`;
                 dossierIntro.style.color = 'rgba(255,255,255,0.9)';
             }
             if (msgPhase3) msgPhase3.innerHTML = '';
