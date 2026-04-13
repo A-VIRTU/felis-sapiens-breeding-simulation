@@ -259,6 +259,8 @@ img {
 @media (min-width: 768px) {
   .dossier-panel-wrapper {
     padding: var(--space-xl);
+    margin-left: calc(-1 * var(--space-xl));
+    margin-right: calc(-1 * var(--space-xl));
   }
 }
 
