@@ -212,6 +212,16 @@ img {
     margin-bottom: var(--space-lg);
   }
 
+  .conversion-panel {
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    border-radius: 0;
+    padding: var(--space-lg) var(--space-sm);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+
   .video-overlay-box {
     top: var(--space-xs);
     left: var(--space-xs);
