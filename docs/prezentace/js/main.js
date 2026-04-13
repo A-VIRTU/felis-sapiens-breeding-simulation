@@ -156,7 +156,8 @@ document.addEventListener('DOMContentLoaded', () => {
             step1.style.display = 'block';
             if (applicantNameInput && applicantName) applicantNameInput.value = applicantName;
             if (dossierIntro) {
-                dossierIntro.innerHTML = `If you align with our <a href="#ethics-concept" style="text-decoration: underline; color: var(--color-accent); font-weight: bold;">unconditional ethics</a>, submit your preliminary coordinates below. We evaluate motivation rigorously.`;
+                const greeting = applicantName ? `<span style="color: var(--color-accent); font-family: var(--font-serif); font-size: 1.1em;">Welcome back, ${applicantName}.</span><br>` : '';
+                dossierIntro.innerHTML = `${greeting}If you align with our <a href="#ethics-concept" style="text-decoration: underline; color: var(--color-accent); font-weight: bold;">unconditional ethics</a>, submit your preliminary coordinates below. We evaluate motivation rigorously.`;
                 dossierIntro.style.color = 'rgba(255,255,255,0.8)';
             }
         } else if (phase === '2') {
