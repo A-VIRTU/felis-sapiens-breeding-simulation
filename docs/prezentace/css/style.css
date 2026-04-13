@@ -213,7 +213,7 @@ img {
     margin-bottom: var(--space-lg);
   }
 
-  .conversion-panel {
+  .conversion-panel, .data-canvas-wrapper {
     position: relative;
     width: 100vw;
     left: 50%;
@@ -771,13 +771,17 @@ textarea.form-control {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  transition: background-color 0.4s var(--ease-cinematic), transform 0.4s var(--ease-cinematic);
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+  transition: all 0.4s var(--ease-cinematic);
 }
 
 .button:hover {
   background-color: var(--color-text);
   border-bottom-color: transparent;
   transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(26,26,46,0.25);
 }
 
 /* Animations */

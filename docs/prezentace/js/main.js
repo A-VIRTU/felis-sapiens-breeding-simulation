@@ -21,6 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.classList.remove('is-active');
             });
         });
+        
+        // Close on outside click
+        document.addEventListener('click', (event) => {
+            if (navLinks.classList.contains('is-active')) {
+                const isClickInsideMenu = navLinks.contains(event.target);
+                const isClickOnHamburger = hamburger.contains(event.target);
+                if (!isClickInsideMenu && !isClickOnHamburger) {
+                    hamburger.classList.remove('is-active');
+                    navLinks.classList.remove('is-active');
+                }
+            }
+        });
     }
 
     /* --- Intersection Observer for Scroll Animations --- */
@@ -153,6 +165,9 @@ function initCharts(data) {
     const getCommonOptions = () => ({
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+            padding: { bottom: 15 }
+        },
         plugins: {
             legend: { position: 'bottom' }
         },
@@ -222,6 +237,7 @@ function initCharts(data) {
         options: {
              responsive: true,
              maintainAspectRatio: false,
+             layout: { padding: { bottom: 15 } },
              plugins: {
                  legend: { position: 'bottom' }
              },
