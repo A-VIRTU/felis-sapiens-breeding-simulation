@@ -103,15 +103,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const step1 = document.getElementById('step-1');
     const step2 = document.getElementById('step-2');
     const step3 = document.getElementById('step-3');
+    const step4 = document.getElementById('step-4');
     
     const btnSubmit1 = document.getElementById('btn-submit-phase1');
     const btnSubmit2 = document.getElementById('btn-submit-phase2');
+    const btnSubmit3 = document.getElementById('btn-submit-phase3');
     const btnBack1   = document.getElementById('btn-back-phase1');
+    const btnBack2   = document.getElementById('btn-back-phase2');
     const btnReset   = document.getElementById('btn-reset-form');
 
     const msgPhase2 = document.getElementById('phase-2-msg');
     const msgPhase3 = document.getElementById('phase-3-msg');
+    const msgPhase4 = document.getElementById('phase-4-msg');
     const formTop   = document.getElementById('dossier-form');
+    const applicantNameInput = document.getElementById('applicantName');
 
     function setPhase(phase) {
         localStorage.setItem('felisSapiensPhase', phase);
@@ -121,15 +126,35 @@ document.addEventListener('DOMContentLoaded', () => {
         return localStorage.getItem('felisSapiensPhase') || '1';
     }
 
+    function saveApplicantName() {
+        if (applicantNameInput && applicantNameInput.value.trim()) {
+            localStorage.setItem('felisSapiensName', applicantNameInput.value.trim());
+        }
+    }
+    
+    function injectApplicantName() {
+        const name = localStorage.getItem('felisSapiensName') || 'Applicant';
+        document.querySelectorAll('.applicant-name-display').forEach(el => {
+            el.textContent = name;
+        });
+    }
+
     function renderPhase(phase, skipScroll = false) {
         if (!step1) return; // fail safe
         
         step1.style.display = 'none';
         step2.style.display = 'none';
-        step3.style.display = 'none';
+        if (step3) step3.style.display = 'none';
+        if (step4) step4.style.display = 'none';
+
+        injectApplicantName();
 
         if (phase === '1') {
             step1.style.display = 'block';
+            if (applicantNameInput) {
+                const savedName = localStorage.getItem('felisSapiensName');
+                if (savedName) applicantNameInput.value = savedName;
+            }
         } else if (phase === '2') {
             step2.style.display = 'block';
             if (msgPhase2 && !msgPhase2.innerHTML) {
@@ -140,12 +165,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>`;
             }
         } else if (phase === '3') {
-            step3.style.display = 'block';
+            if (step3) step3.style.display = 'block';
             if (msgPhase3 && !msgPhase3.innerHTML) {
                 msgPhase3.innerHTML = `
+                <div style="background-color: rgba(45, 90, 74, 0.05); border: 1px solid rgba(45, 90, 74, 0.2); padding: var(--space-md); margin-bottom: var(--space-md); border-radius: 4px;">
+                    <strong style="color: var(--color-data-1); display: block; margin-bottom: 5px;">Context Topography Recorded.</strong>
+                    <span style="color: var(--color-text); font-size: var(--text-sm);">Environmental layout has been successfully cached. Please complete the final psychological framework to lock your dossier.</span>
+                </div>`;
+            }
+        } else if (phase === '4') {
+            if (step4) step4.style.display = 'block';
+            if (msgPhase4 && !msgPhase4.innerHTML) {
+                msgPhase4.innerHTML = `
                 <div style="background-color: rgba(164, 119, 100, 0.1); border: 1px solid rgba(164, 119, 100, 0.3); padding: var(--space-xl) var(--space-md); margin-bottom: var(--space-md); border-radius: 4px; text-align: center;">
-                    <strong style="color: var(--color-accent); display: block; margin-bottom: 10px; font-size: var(--text-lg); font-family: var(--font-serif);">Dossier Recorded in Local Cache.</strong>
-                    <span style="color: var(--color-text); font-size: var(--text-sm);">Thank you for completing the context questionnaire. Formal registry processing is currently handled manually.<br><br>Please finalize and send your intent directly to <br><strong style="font-size: var(--text-md); margin-top: 10px; display: block;">protocol@felis-sapiens.com</strong></span>
+                    <strong style="color: var(--color-accent); display: block; margin-bottom: 10px; font-size: var(--text-lg); font-family: var(--font-serif);">Dossier Officially Secured.</strong>
+                    <span style="color: var(--color-text); font-size: var(--text-sm);">Thank you. Your behavioral responses and contextual framework are successfully preserved in the local cache.<br><br>We treat all subjective data with uncompromising ethical standards. You may now finalize your inquiry by forwarding this intent directly to:<br><strong style="font-size: var(--text-md); margin-top: 10px; display: block; letter-spacing: 1px;">protocol@felis-sapiens.com</strong></span>
                 </div>`;
             }
         }
@@ -160,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPhase(getPhase(), true);
         
         if (btnSubmit1) btnSubmit1.addEventListener('click', () => {
+            saveApplicantName();
             setPhase('2');
             renderPhase('2');
         });
@@ -173,9 +208,21 @@ document.addEventListener('DOMContentLoaded', () => {
             setPhase('3');
             renderPhase('3');
         });
+        
+        if (btnBack2) btnBack2.addEventListener('click', () => {
+            setPhase('2');
+            renderPhase('2');
+        });
+        
+        if (btnSubmit3) btnSubmit3.addEventListener('click', () => {
+            setPhase('4');
+            renderPhase('4');
+        });
 
         if (btnReset) btnReset.addEventListener('click', () => {
             localStorage.removeItem('felisSapiensPhase');
+            localStorage.removeItem('felisSapiensName');
+            if(applicantNameInput) applicantNameInput.value = '';
             renderPhase('1');
         });
     }
