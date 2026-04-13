@@ -347,21 +347,23 @@ img {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Progressive item hiding for 5 items */
+/* Progressive item hiding based on explicit priority classes */
+.nav-links:not(.is-active) .secondary-nav-item { display: none; }
+
 @media (max-width: 1250px) {
-  .nav-links:not(.is-active) a:nth-child(5) { display: none; }
+  .nav-links:not(.is-active) .hide-on-1250 { display: none; }
 }
 @media (max-width: 1100px) {
-  .nav-links:not(.is-active) a:nth-child(4) { display: none; }
+  .nav-links:not(.is-active) .hide-on-1100 { display: none; }
 }
 @media (max-width: 950px) {
-  .nav-links:not(.is-active) a:nth-child(3) { display: none; }
+  .nav-links:not(.is-active) .hide-on-950 { display: none; }
 }
 @media (max-width: 750px) {
-  .nav-links:not(.is-active) a:nth-child(2) { display: none; }
+  .nav-links:not(.is-active) .hide-on-750 { display: none; }
 }
 @media (max-width: 450px) {
-  .nav-links:not(.is-active) a:nth-child(1) { display: none; }
+  .nav-links:not(.is-active) .hide-on-450 { display: none; }
   .nav-links { margin-right: 0; }
 }
 
