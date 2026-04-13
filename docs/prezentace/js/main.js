@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (applicantNameInput && applicantName) applicantNameInput.value = applicantName;
             if (dossierIntro) {
                 const greeting = applicantName ? `<span style="color: var(--color-accent); font-family: var(--font-serif); font-size: 1.1em;">Welcome back, ${applicantName}.</span><br>` : '';
-                dossierIntro.innerHTML = `${greeting}If you align with our <a href="#ethics-concept" style="text-decoration: underline; color: var(--color-accent); font-weight: bold;">unconditional ethics</a>, submit your preliminary coordinates below. We evaluate motivation rigorously.`;
+                dossierIntro.innerHTML = `${greeting}If our <a href="#ethics-concept" style="text-decoration: underline; color: var(--color-accent); font-weight: bold;">ethical approach</a> resonates with you, we invite you to submit your preliminary details below. We value candidates who share our vision.`;
                 dossierIntro.style.color = 'rgba(255,255,255,0.8)';
             }
         } else if (phase === '2') {
