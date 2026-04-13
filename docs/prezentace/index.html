@@ -434,16 +434,16 @@
                 <h2>Formal Applicant Submission</h2>
                 <p id="dossier-intro-text" style="font-size: var(--text-sm); margin-bottom: var(--space-lg); color: rgba(255,255,255,0.8);">If our <a href="#ethics-concept" style="text-decoration: underline; color: var(--color-accent); font-weight: bold;">ethical approach</a> resonates with you, we invite you to submit your preliminary details below. We value candidates who share our vision.</p>
                 
-                <form action="#" method="POST" style="margin-bottom: var(--space-xl);">
+                <form id="submission-form" action="#" method="POST" style="margin-bottom: var(--space-xl);">
                     <!-- STEP 1: Basic Identity & Intent -->
                     <div id="step-1">
                         <div class="form-group">
                             <label>Applicant Name</label>
-                            <input type="text" class="form-control" id="applicantName" placeholder="Your full legal name" required>
+                            <input type="text" class="form-control" id="applicantName" name="applicantName" placeholder="Your full legal name" required>
                         </div>
                         <div class="form-group">
                             <label>Secure Communication Channel (Email)</label>
-                            <input type="email" class="form-control" placeholder="Primary email address" required>
+                            <input type="email" class="form-control" id="applicantEmail" name="applicantEmail" placeholder="Primary email address" required>
                         </div>
                         <div class="form-group" style="margin-bottom: var(--space-xl);">
                             <label style="margin-bottom: var(--space-md);">Define Your Acquisition Intent</label>
@@ -523,11 +523,11 @@
                         
                         <div class="form-group">
                             <label>Environmental Topography</label>
-                            <textarea class="form-control" placeholder="Describe your household layout, access to secured outdoor spaces (if any), and daily rhythm..." rows="3" required></textarea>
+                            <textarea class="form-control" name="envTopography" placeholder="Describe your household layout, access to secured outdoor spaces (if any), and daily rhythm..." rows="3" required></textarea>
                         </div>
                         <div class="form-group">
                             <label>Household Demographics & Companion Animals</label>
-                            <textarea class="form-control" placeholder="Are there children? Dogs? Other cats? Who lives in the household day-to-day?" rows="3" required></textarea>
+                            <textarea class="form-control" name="envDemographics" placeholder="Are there children? Dogs? Other cats? Who lives in the household day-to-day?" rows="3" required></textarea>
                         </div>
                         <div class="form-group" style="margin-top: var(--space-md);">
                             <label style="display: flex; gap: 10px; align-items: start; color: var(--color-bg); font-weight: bold; cursor: pointer;">
@@ -539,7 +539,7 @@
                         </div>
                         <div class="form-group" style="margin-top: var(--space-md);">
                             <label style="display: flex; gap: 10px; align-items: start; color: var(--color-bg); font-weight: bold;">
-                                <input type="checkbox" style="margin-top: 3px;">
+                                <input type="checkbox" name="calibrationConsent" style="margin-top: 3px;">
                                 <span>Data Calibration Consent & Research Participation<br>
                                     <span style="font-size: 10px; font-weight: normal; color: rgba(255,255,255,0.6); text-transform: none; letter-spacing: normal;">I agree to routinely provide anonymized behavioral metrics via the Dashboard to refine the core algorithms.</span>
                                 </span>
@@ -547,7 +547,7 @@
                         </div>
                         <div class="form-group">
                             <label>Public Research Credit (Optional)</label>
-                            <textarea class="form-control" placeholder="Brand / Cattery name for public display. Leave blank for anonymity." rows="3"></textarea>
+                            <textarea class="form-control" name="publicCredit" placeholder="Brand / Cattery name for public display. Leave blank for anonymity." rows="3"></textarea>
                         </div>
                         <div style="margin-top: var(--space-lg);">
                             <button type="button" class="button" id="btn-submit-phase2" style="width: 100%;">Proceed</button>
@@ -563,15 +563,15 @@
 
                         <div class="form-group">
                             <label>What drives your desire for advanced cognitive capacity?</label>
-                            <textarea class="form-control" placeholder="Are you seeking a companion, a challenge, or a philosophical mirror? Please share your thoughts." rows="3" required></textarea>
+                            <textarea class="form-control" name="humanElementDrive" placeholder="Are you seeking a companion, a challenge, or a philosophical mirror? Please share your thoughts." rows="3" required></textarea>
                         </div>
                         <div class="form-group">
                             <label>Empathy & Positive Resolution</label>
-                            <textarea class="form-control" placeholder="How do you plan to handle the unpredictable moments of daily life positively, ensuring mutual understanding and unconditional trust?" rows="3" required></textarea>
+                            <textarea class="form-control" name="humanElementEmpathy" placeholder="How do you plan to handle the unpredictable moments of daily life positively, ensuring mutual understanding and unconditional trust?" rows="3" required></textarea>
                         </div>
                         <div class="form-group" style="margin-top: var(--space-md);">
                             <label>General Notes / Open Floor</label>
-                            <textarea class="form-control" placeholder="Any final thoughts, specific requests, or philosophical observations you wish to share with our breeding board..." rows="4"></textarea>
+                            <textarea class="form-control" name="generalNotes" placeholder="Any final thoughts, specific requests, or philosophical observations you wish to share with our breeding board..." rows="4"></textarea>
                         </div>
 
                         <div style="margin-top: var(--space-lg);">
@@ -584,7 +584,7 @@
                         <div id="phase-4-msg"></div>
                         <div class="form-group" style="margin-bottom: var(--space-lg);">
                             <label>Append Additional Thoughts (Optional)</label>
-                            <textarea class="form-control" id="additionalMessage" placeholder="Anything else crossing your mind..." rows="4"></textarea>
+                            <textarea class="form-control" id="additionalMessage" name="additionalMessage" placeholder="Anything else crossing your mind..." rows="4"></textarea>
                             <button type="button" class="button" id="btn-submit-phase4" style="width: 100%; margin-top: var(--space-sm);">Append to Dossier</button>
                         </div>
                         <button type="button" class="button button-outline" id="btn-reset-form" style="margin-top: var(--space-md); width: 100%; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7);">Start New Inquiry (Clear Local Data)</button>

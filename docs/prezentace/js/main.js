@@ -55,8 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
     animateElements.forEach(el => animateOnScrollObserver.observe(el));
 
 
-    /* --- Chart.js Setup using simulation data.js --- */
-    // Provided by ../vizualizace/data.js (global object simulationData)
+    /* --- Webhook Configuration (Vercel / Make.com) --- */
+    const WEBHOOK_URL = ''; // FILL THIS WITH YOUR MAKE.COM WEBHOOK URL
+
+    /* --- Application Loading --- */
     if (typeof simulationData !== 'undefined') {
         initCharts(simulationData);
     } else if (typeof exportedData !== 'undefined') {
@@ -231,20 +233,81 @@ document.addEventListener('DOMContentLoaded', () => {
             renderPhase('2');
         });
         
-        if (btnSubmit3) btnSubmit3.addEventListener('click', () => {
+        if (btnSubmit3) btnSubmit3.addEventListener('click', async () => {
             if (!validatePhase(step3)) return;
-            setPhase('4');
-            renderPhase('4');
+            
+            const originalText = btnSubmit3.innerText;
+            btnSubmit3.innerText = 'Securing Dossier...';
+            btnSubmit3.disabled = true;
+
+            try {
+                const formElement = document.getElementById('submission-form');
+                let payload = {};
+                if (formElement) {
+                    const formData = new FormData(formElement);
+                    payload = Object.fromEntries(formData.entries());
+                    // Force boolean outputs for checkboxes
+                    formElement.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                        payload[cb.name] = cb.checked;
+                    });
+                }
+
+                if (WEBHOOK_URL) {
+                    await fetch(WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                } else {
+                    console.info("Simulated submission (Webhook not configured). Payload:", payload);
+                    await new Promise(r => setTimeout(r, 800));
+                }
+
+                setPhase('4');
+                renderPhase('4');
+            } catch (err) {
+                console.error("Submission failed:", err);
+                alert("Network anomaly detected. Please try submitting again.");
+            } finally {
+                btnSubmit3.innerText = originalText;
+                btnSubmit3.disabled = false;
+            }
         });
 
-        if (btnSubmit4) btnSubmit4.addEventListener('click', () => {
+        if (btnSubmit4) btnSubmit4.addEventListener('click', async () => {
             if (additionalMessage && additionalMessage.value.trim() !== '') {
                 const originalText = btnSubmit4.innerText;
-                btnSubmit4.innerText = 'Appended to your file ✓';
-                additionalMessage.value = '';
-                setTimeout(() => {
-                    if(btnSubmit4.innerText === 'Appended to your file ✓') btnSubmit4.innerText = originalText;
-                }, 3000);
+                btnSubmit4.innerText = 'Transmitting...';
+                btnSubmit4.disabled = true;
+
+                try {
+                    const emailParam = document.getElementById('applicantEmail')?.value || 'unknown_email';
+                    const payload = {
+                        action: 'APPEND_NOTE',
+                        applicantEmail: emailParam,
+                        message: additionalMessage.value.trim()
+                    };
+
+                    if (WEBHOOK_URL) {
+                        await fetch(WEBHOOK_URL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                    }
+
+                    btnSubmit4.innerText = 'Appended to your file ✓';
+                    additionalMessage.value = '';
+                    setTimeout(() => {
+                        if(btnSubmit4.innerText === 'Appended to your file ✓') btnSubmit4.innerText = originalText;
+                    }, 3000);
+                } catch(err) {
+                    console.error("Append failed:", err);
+                    alert("Append anomaly detected.");
+                    btnSubmit4.innerText = originalText;
+                } finally {
+                    btnSubmit4.disabled = false;
+                }
             }
         });
 
