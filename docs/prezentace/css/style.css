@@ -175,6 +175,8 @@ img {
     --space-lg: calc(1rem * var(--phi) * var(--phi));
     --space-xl: calc(1rem * var(--phi) * var(--phi) * var(--phi));
     --space-xxl: calc(var(--space-xl) * var(--phi));
+    /* Shrink the massive desktop header height for mobile */
+    --header-h: calc(2.5rem * var(--phi));
   }
 
   html {
