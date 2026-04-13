@@ -214,10 +214,11 @@ img {
   }
 
   .conversion-panel {
+    position: relative;
     width: 100vw;
     left: 50%;
     margin-left: -50vw;
-    border-radius: 0;
+    border-radius: 0 !important;
     padding: var(--space-lg) var(--space-sm);
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
