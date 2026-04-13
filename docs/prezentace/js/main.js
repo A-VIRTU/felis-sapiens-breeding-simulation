@@ -149,39 +149,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
         injectApplicantName();
 
+        const dossierIntro = document.getElementById('dossier-intro-text');
+        const applicantName = localStorage.getItem('felisSapiensName') || '';
+
         if (phase === '1') {
             step1.style.display = 'block';
-            if (applicantNameInput) {
-                const savedName = localStorage.getItem('felisSapiensName');
-                if (savedName) applicantNameInput.value = savedName;
+            if (applicantNameInput && applicantName) applicantNameInput.value = applicantName;
+            if (dossierIntro) {
+                dossierIntro.innerHTML = `If you align with our <a href="#ethics-concept" style="text-decoration: underline; color: var(--color-accent); font-weight: bold;">unconditional ethics</a>, submit your preliminary coordinates below. We evaluate motivation rigorously.`;
+                dossierIntro.style.color = 'rgba(255,255,255,0.8)';
             }
         } else if (phase === '2') {
             step2.style.display = 'block';
-            if (msgPhase2 && !msgPhase2.innerHTML) {
-                msgPhase2.innerHTML = `
-                <div style="background-color: rgba(45, 90, 74, 0.05); border: 1px solid rgba(45, 90, 74, 0.2); padding: var(--space-md); margin-bottom: var(--space-md); border-radius: 4px;">
-                    <strong style="color: var(--color-data-1); display: block; margin-bottom: 5px;">Preliminary Identity Confirmed.</strong>
-                    <span style="color: var(--color-text); font-size: var(--text-sm);">Your core coordinates and initial intent have been locally secured. To complete your applicant file, please proceed with the context verification.</span>
-                </div>`;
+            if (dossierIntro) {
+                const greeting = applicantName ? `Dear ${applicantName}, thank you` : 'Thank you';
+                dossierIntro.innerHTML = `${greeting} immensely for initiating this process. Your preliminary identity is securely recorded. We sincerely appreciate your interest in the Felis Sapiens lineage and deeply value candidates who share our vision. To continue gently, please share the environmental context of your household below.`;
+                dossierIntro.style.color = 'rgba(255,255,255,0.9)';
             }
+            if (msgPhase2) msgPhase2.innerHTML = ''; // Keep clean of legacy alerts
         } else if (phase === '3') {
             if (step3) step3.style.display = 'block';
-            if (msgPhase3 && !msgPhase3.innerHTML) {
-                msgPhase3.innerHTML = `
-                <div style="background-color: rgba(45, 90, 74, 0.05); border: 1px solid rgba(45, 90, 74, 0.2); padding: var(--space-md); margin-bottom: var(--space-md); border-radius: 4px;">
-                    <strong style="color: var(--color-data-1); display: block; margin-bottom: 5px;">Context Topography Recorded.</strong>
-                    <span style="color: var(--color-text); font-size: var(--text-sm);">Environmental layout has been successfully cached. Please complete the final psychological framework to lock your dossier.</span>
-                </div>`;
+            if (dossierIntro) {
+                const greeting = applicantName ? `Thank you, ${applicantName}, for detailing` : 'Thank you for detailing';
+                dossierIntro.innerHTML = `${greeting} your environment. We are truly reading every word and appreciate your transparency. As our absolute final step, we kindly ask you to share your broader philosophy and expectations. This helps us ensure the perfect, seamless synergy between you and the feline intellect.`;
+                dossierIntro.style.color = 'rgba(255,255,255,0.9)';
             }
+            if (msgPhase3) msgPhase3.innerHTML = '';
         } else if (phase === '4') {
             if (step4) step4.style.display = 'block';
-            if (msgPhase4 && !msgPhase4.innerHTML) {
-                msgPhase4.innerHTML = `
-                <div style="background-color: rgba(164, 119, 100, 0.1); border: 1px solid rgba(164, 119, 100, 0.3); padding: var(--space-xl) var(--space-md); margin-bottom: var(--space-md); border-radius: 4px; text-align: center;">
-                    <strong style="color: var(--color-accent); display: block; margin-bottom: 10px; font-size: var(--text-lg); font-family: var(--font-serif);">Dossier Officially Secured.</strong>
-                    <span style="color: var(--color-text); font-size: var(--text-sm);">Thank you. Your behavioral responses and contextual framework are successfully preserved in the local cache.<br><br>We treat all subjective data with uncompromising ethical standards. Formal registry processing and all subsequent communication is currently handled strictly manually by humans.<br><br>You may now finalize your inquiry by forwarding this intent directly to:<br><strong style="font-size: var(--text-md); margin-top: 10px; display: block; letter-spacing: 1px;">protocol@felis-sapiens.com</strong></span>
-                </div>`;
+            if (dossierIntro) {
+                dossierIntro.innerHTML = `<span style="color: var(--color-accent); font-size: var(--text-md); display: block; margin-bottom: var(--space-xs); font-family: var(--font-serif);">Dossier Officially Secured</span>Thank you beyond words. Your behavioral responses and contextual framework have been successfully preserved.<br><br>We treat all subjective data with uncompromising ethical standards. Formal registry processing and all subsequent communication is currently handled strictly manually by humans at A VIRTÙ.<br><br>You may now finalize your inquiry by forwarding a very simple initiation message directly to:<br><strong style="font-size: var(--text-md); margin-top: 10px; display: block; letter-spacing: 1px;">protocol@felis-sapiens.com</strong>`;
+                dossierIntro.style.color = 'var(--color-bg)';
             }
+            if (msgPhase4) msgPhase4.innerHTML = '';
         }
 
         if (!skipScroll && formTop) {
