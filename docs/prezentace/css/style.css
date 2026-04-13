@@ -67,6 +67,7 @@ html {
   font-size: 115%;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + var(--space-md));
+  overflow-x: hidden;
 }
 
 :target, *[tabindex="-1"]:focus {
