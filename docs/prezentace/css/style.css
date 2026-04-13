@@ -211,9 +211,10 @@ img {
 
 
   .video-observatory {
-    width: 100vw;
-    left: 50%;
-    margin-left: -50vw;
+    position: relative;
+    width: calc(100% + 8vw + (2 * var(--space-sm)));
+    left: auto;
+    margin-left: calc(-4vw - var(--space-sm));
     border-radius: 0;
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
@@ -221,9 +222,9 @@ img {
 
   .conversion-panel, .data-canvas-wrapper {
     position: relative;
-    width: 100vw;
-    left: 50%;
-    margin-left: -50vw;
+    width: calc(100% + 8vw + (2 * var(--space-sm)));
+    left: auto;
+    margin-left: calc(-4vw - var(--space-sm));
     border-radius: 0 !important;
     padding: var(--space-xl) calc(4vw + var(--space-sm));
     margin-top: var(--space-lg);
