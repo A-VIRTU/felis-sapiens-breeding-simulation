@@ -50,8 +50,14 @@
   --font-serif: 'Playfair Display', serif; /* For H1, H2, H3 and elegant hooks */
   --font-sans: 'Inter', sans-serif;        /* For data, paragraphs, unadorned truth */
   
-  /* Easing */
+  /* Easing & Temporal Mechanics (Mathematical Hermeticism) */
   --ease-cinematic: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --t-base: 2s;
+  --t-swift: calc(var(--t-base) * var(--phi-inv));             /* ~1.23s */
+  --t-flow: var(--t-base);                                     /* 2.00s */
+  --t-languid: calc(var(--t-base) * var(--phi));               /* ~3.23s */
+  --t-heavy: calc(var(--t-base) * var(--phi) * var(--phi));    /* ~5.23s */
+  --t-monolithic: calc(var(--t-heavy) * var(--phi));           /* ~8.47s */
 }
 
 /* =========================================
@@ -882,21 +888,21 @@ textarea.form-control {
 
 .anim-fade-in-1 {
   opacity: 0;
-  animation: cinematicTextFade 4s ease-in-out 0.1s forwards;
+  animation: cinematicTextFade var(--t-flow) ease-in-out 0s forwards;
 }
 .anim-line-1 {
   opacity: 0;
-  animation: cinematicTextFade 6s ease-in-out 0.3s forwards;
+  animation: cinematicTextFade var(--t-heavy) ease-in-out 0s forwards;
 }
 .anim-line-2 {
   opacity: 0;
-  animation: cinematicTextFade 6s ease-in-out 1.8s forwards;
+  animation: cinematicTextFade var(--t-languid) ease-in-out var(--t-flow) forwards;
 }
 .anim-fade-in-2 {
   opacity: 0;
-  animation: cinematicTextFade 5s ease-in-out 3.5s forwards;
+  animation: cinematicTextFade var(--t-flow) ease-in-out var(--t-languid) forwards;
 }
 .hero .large-logo-bg.anim-logo {
   opacity: 0;
-  animation: cinematicLogoFade 8s ease-in-out 3.5s forwards;
+  animation: cinematicLogoFade var(--t-monolithic) ease-in-out var(--t-languid) forwards;
 }
