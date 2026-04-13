@@ -295,6 +295,7 @@ img {
   text-transform: uppercase;
   order: 2;
   margin-right: var(--space-sm);
+  margin-top: 8px;
 }
 
 .hamburger-menu {
