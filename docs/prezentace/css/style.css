@@ -850,6 +850,10 @@ textarea.form-control {
   }
   
   .conversion-panel.dossier-panel-wrapper {
-    padding: var(--space-xl) 4vw !important;
+    width: auto !important;
+    max-width: none !important;
+    margin-left: calc(-4vw - var(--space-sm)) !important;
+    margin-right: calc(-4vw - var(--space-sm)) !important;
+    padding: var(--space-xl) calc(4vw + var(--space-sm)) !important;
   }
 }
