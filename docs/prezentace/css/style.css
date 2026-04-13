@@ -576,7 +576,7 @@ img {
 
 .intent-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: var(--space-xs);
 }
@@ -589,6 +589,8 @@ img {
 
 .intent-badge {
   margin-left: var(--space-sm);
+  margin-right: var(--space-sm);
+  margin-top: 4px;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -604,8 +606,10 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin-left: auto;
+  margin-top: 6px;
   position: relative;
   transition: border-color 0.3s ease;
+  flex-shrink: 0;
 }
 
 .intent-card input[type="radio"]:checked + .intent-card-content .intent-radio-icon {
