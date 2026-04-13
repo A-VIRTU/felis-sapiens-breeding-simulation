@@ -403,7 +403,7 @@ img {
   transform: translateY(-50%);
   width: 50vw;
   max-width: 800px;
-  opacity: 0.05;
+  opacity: 0.20;
   pointer-events: none;
   z-index: 1;
 }
