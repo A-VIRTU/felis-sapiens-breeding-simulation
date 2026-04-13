@@ -166,8 +166,19 @@ img {
 }
 
 @media (max-width: 768px) {
+  :root {
+    /* Scale down all spacing units by a factor of phi for mobile to preserve horizontal space */
+    --space-xxs: calc(1rem * var(--phi-inv) * var(--phi-inv));
+    --space-xs: calc(1rem * var(--phi-inv));
+    --space-sm: 1rem;
+    --space-md: calc(1rem * var(--phi));
+    --space-lg: calc(1rem * var(--phi) * var(--phi));
+    --space-xl: calc(1rem * var(--phi) * var(--phi) * var(--phi));
+    --space-xxl: calc(var(--space-xl) * var(--phi));
+  }
+
   html {
-    font-size: 120%;
+    font-size: 115%; /* Keep beautiful large typography, slightly optimized */
   }
   
   .phi-grid { 
@@ -179,12 +190,24 @@ img {
   }
 
   .site-header {
-    padding: var(--space-xs) var(--space-md);
+    padding: var(--space-xs) var(--space-sm);
   }
 
-  h1 { font-size: var(--text-xxl) !important; }
-  h2 { font-size: var(--text-xl) !important; }
-  
+  section {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .data-canvas-wrapper {
+    padding: var(--space-xs);
+  }
+
+  .video-overlay-box {
+    top: var(--space-xs);
+    left: var(--space-xs);
+    right: var(--space-xs);
+    padding: var(--space-sm);
+  }
+
   h1 { font-size: var(--text-xxl) !important; }
   h2 { font-size: var(--text-xl) !important; }
 }
