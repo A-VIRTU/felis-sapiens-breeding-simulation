@@ -820,16 +820,16 @@ textarea.form-control {
   border-color: rgba(26,26,46,0.15);
 }
 
-/* Animations */
+/* Animations (Temporarily disabled per request) */
 .animate-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s var(--ease-cinematic), transform 0.8s var(--ease-cinematic);
+  /* opacity: 0; */
+  /* transform: translateY(20px); */
+  /* transition: opacity 0.8s var(--ease-cinematic), transform 0.8s var(--ease-cinematic); */
 }
 
 .animate-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+  /* opacity: 1; */
+  /* transform: translateY(0); */
 }
 
 /* Force mobile breakout geometry overrides */
