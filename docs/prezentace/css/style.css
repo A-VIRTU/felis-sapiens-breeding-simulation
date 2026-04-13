@@ -175,7 +175,7 @@ img {
     box-shadow: 0 20px 40px rgba(26,26,46,0.3);
   }
   
-  .phi-grid {
+  :root {
     /* Scale down all spacing units by a factor of phi for mobile to preserve horizontal space */
     --space-xxs: calc(1rem * var(--phi-inv) * var(--phi-inv));
     --space-xs: calc(1rem * var(--phi-inv));
