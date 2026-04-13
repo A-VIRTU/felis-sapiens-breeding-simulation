@@ -211,22 +211,14 @@ img {
 
 
   .video-observatory {
-    position: relative;
-    width: calc(100% + 8vw + (2 * var(--space-sm)));
-    left: auto;
-    margin-left: calc(-4vw - var(--space-sm));
     border-radius: 0;
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
   }
 
   .conversion-panel, .data-canvas-wrapper {
-    position: relative;
-    width: calc(100% + 8vw + (2 * var(--space-sm)));
-    left: auto;
-    margin-left: calc(-4vw - var(--space-sm));
     border-radius: 0 !important;
-    padding: var(--space-xl) calc(4vw + var(--space-sm));
+    padding: var(--space-xl) var(--space-md);
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
   }
@@ -832,13 +824,18 @@ textarea.form-control {
   /* transform: translateY(0); */
 }
 
-/* Force mobile breakout geometry overrides */
+/* Force mobile breakout geometry overrides and chart stability */
 @media (max-width: 768px) {
-  .conversion-panel.dossier-panel-wrapper {
-    margin-left: calc(-4vw - var(--space-sm)) !important;
-    margin-right: calc(-4vw - var(--space-sm)) !important;
-    width: calc(100% + 8vw + (2 * var(--space-sm))) !important;
-    padding: var(--space-xl) calc(4vw + var(--space-sm)) !important;
-    border-radius: 0 !important;
+  .conversion-panel.dossier-panel-wrapper,
+  .data-canvas-wrapper,
+  .video-observatory {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
