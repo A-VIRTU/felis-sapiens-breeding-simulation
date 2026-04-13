@@ -642,6 +642,7 @@ img {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--color-bg);
+  caret-color: var(--color-bg);
   font-family: var(--font-sans);
   border-radius: 2px;
   transition: border-color 0.3s ease, background 0.3s ease;
