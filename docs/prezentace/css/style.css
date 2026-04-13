@@ -848,4 +848,8 @@ textarea.form-control {
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
   }
+  
+  .conversion-panel.dossier-panel-wrapper {
+    padding: var(--space-xl) 4vw !important;
+  }
 }
