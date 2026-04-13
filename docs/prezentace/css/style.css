@@ -201,10 +201,20 @@ img {
     padding: var(--space-xs);
   }
 
+  .video-observatory {
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    border-radius: 0;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+
   .video-overlay-box {
     top: var(--space-xs);
     left: var(--space-xs);
-    right: var(--space-xs);
+    right: auto;
+    width: calc(100% - (2 * var(--space-xs)));
     padding: var(--space-sm);
   }
 
