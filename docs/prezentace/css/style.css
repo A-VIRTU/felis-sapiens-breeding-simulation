@@ -820,7 +820,7 @@ textarea.form-control {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1.2s var(--ease-cinematic), transform 1.2s var(--ease-cinematic);
+  transition: opacity 0.8s var(--ease-cinematic), transform 0.8s var(--ease-cinematic);
 }
 
 .animate-on-scroll.is-visible {
