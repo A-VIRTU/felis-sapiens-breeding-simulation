@@ -479,11 +479,12 @@
                                 </label>
                             </div>
                         </div>
-                        <button type="button" class="button" onclick="alert('Preliminary Identity Confirmed.\n\nYour core coordinates and initial intent have been locally secured.\nTo complete your applicant file, please proceed with the context verification.'); document.getElementById('step-1').style.display = 'none'; document.getElementById('step-2').style.display = 'block'; window.location.hash = 'dossier-form';">Submit Preliminary Inquiry</button>
+                        <button type="button" class="button" id="btn-submit-phase1">Submit Preliminary Inquiry</button>
                     </div>
 
                     <!-- STEP 2: Deep-Dive Context -->
                     <div id="step-2" style="display: none;">
+                        <div id="phase-2-msg"></div>
                         <h3 style="color: var(--color-text); margin-bottom: var(--space-xs);">Identity Secured. Phase Two.</h3>
                         <p style="font-size: var(--text-sm); color: var(--color-accent); margin-bottom: var(--space-md); padding-left: 10px; border-left: 3px solid var(--color-accent);"><strong>Why do we ask this?</strong><br>We need to know everything related to the context of placing an extreme-intellect feline into a new environment. This isn't bureaucracy—it is our absolute duty to the kittens to ensure their neural architecture thrives in your specific ecosystem. Please be as detailed and honest as possible.</p>
                         
@@ -516,9 +517,15 @@
                             <input type="text" class="form-control" placeholder="Brand / Cattery name for public display. Leave blank for anonymity.">
                         </div>
                         <div style="display: flex; gap: 1rem;">
-                            <button type="button" class="button button-outline" onclick="document.getElementById('step-2').style.display = 'none'; document.getElementById('step-1').style.display = 'block';" style="padding: 0.5rem 1rem;">Back</button>
-                            <button type="button" class="button" onclick="alert('Thank you for completing the context questionnaire. Registration captured in local cache.\n\nFormal registry processing is currently handled manually. Please finalize and send your intent directly to protocol@felis-sapiens.com to bypass the automated waitlist queue.'); this.innerHTML = 'DOSSIER RECORDED';" style="flex: 1;">Submit Complete Dossier</button>
+                            <button type="button" class="button button-outline" id="btn-back-phase1" style="padding: 0.5rem 1rem;">Back</button>
+                            <button type="button" class="button" id="btn-submit-phase2" style="flex: 1;">Submit Complete Dossier</button>
                         </div>
+                    </div>
+
+                    <!-- STEP 3: Final State -->
+                    <div id="step-3" style="display: none;">
+                        <div id="phase-3-msg"></div>
+                        <button type="button" class="button button-outline" id="btn-reset-form" style="margin-top: var(--space-md); width: 100%; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7);">Start New Inquiry (Clear Local Data)</button>
                     </div>
                 </form>
 

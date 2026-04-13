@@ -98,6 +98,87 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    /* --- Form Progression Logic --- */
+    const step1 = document.getElementById('step-1');
+    const step2 = document.getElementById('step-2');
+    const step3 = document.getElementById('step-3');
+    
+    const btnSubmit1 = document.getElementById('btn-submit-phase1');
+    const btnSubmit2 = document.getElementById('btn-submit-phase2');
+    const btnBack1   = document.getElementById('btn-back-phase1');
+    const btnReset   = document.getElementById('btn-reset-form');
+
+    const msgPhase2 = document.getElementById('phase-2-msg');
+    const msgPhase3 = document.getElementById('phase-3-msg');
+    const formTop   = document.getElementById('dossier-form');
+
+    function setPhase(phase) {
+        localStorage.setItem('felisSapiensPhase', phase);
+    }
+
+    function getPhase() {
+        return localStorage.getItem('felisSapiensPhase') || '1';
+    }
+
+    function renderPhase(phase, skipScroll = false) {
+        if (!step1) return; // fail safe
+        
+        step1.style.display = 'none';
+        step2.style.display = 'none';
+        step3.style.display = 'none';
+
+        if (phase === '1') {
+            step1.style.display = 'block';
+        } else if (phase === '2') {
+            step2.style.display = 'block';
+            if (msgPhase2 && !msgPhase2.innerHTML) {
+                msgPhase2.innerHTML = `
+                <div style="background-color: rgba(45, 90, 74, 0.05); border: 1px solid rgba(45, 90, 74, 0.2); padding: var(--space-md); margin-bottom: var(--space-md); border-radius: 4px;">
+                    <strong style="color: var(--color-data-1); display: block; margin-bottom: 5px;">Preliminary Identity Confirmed.</strong>
+                    <span style="color: var(--color-text); font-size: var(--text-sm);">Your core coordinates and initial intent have been locally secured. To complete your applicant file, please proceed with the context verification.</span>
+                </div>`;
+            }
+        } else if (phase === '3') {
+            step3.style.display = 'block';
+            if (msgPhase3 && !msgPhase3.innerHTML) {
+                msgPhase3.innerHTML = `
+                <div style="background-color: rgba(164, 119, 100, 0.1); border: 1px solid rgba(164, 119, 100, 0.3); padding: var(--space-xl) var(--space-md); margin-bottom: var(--space-md); border-radius: 4px; text-align: center;">
+                    <strong style="color: var(--color-accent); display: block; margin-bottom: 10px; font-size: var(--text-lg); font-family: var(--font-serif);">Dossier Recorded in Local Cache.</strong>
+                    <span style="color: var(--color-text); font-size: var(--text-sm);">Thank you for completing the context questionnaire. Formal registry processing is currently handled manually.<br><br>Please finalize and send your intent directly to <br><strong style="font-size: var(--text-md); margin-top: 10px; display: block;">protocol@felis-sapiens.com</strong></span>
+                </div>`;
+            }
+        }
+
+        if (!skipScroll && formTop) {
+            formTop.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Initialize on load
+    if (step1) {
+        renderPhase(getPhase(), true);
+        
+        if (btnSubmit1) btnSubmit1.addEventListener('click', () => {
+            setPhase('2');
+            renderPhase('2');
+        });
+        
+        if (btnBack1) btnBack1.addEventListener('click', () => {
+            setPhase('1');
+            renderPhase('1');
+        });
+
+        if (btnSubmit2) btnSubmit2.addEventListener('click', () => {
+            setPhase('3');
+            renderPhase('3');
+        });
+
+        if (btnReset) btnReset.addEventListener('click', () => {
+            localStorage.removeItem('felisSapiensPhase');
+            renderPhase('1');
+        });
+    }
 });
 
 function initCharts(data) {
