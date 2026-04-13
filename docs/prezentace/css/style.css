@@ -167,7 +167,15 @@ img {
 }
 
 @media (max-width: 768px) {
-  :root {
+  .nav-links.is-active {
+    left: 0;
+    right: 0;
+    min-width: auto;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 20px 40px rgba(26,26,46,0.3);
+  }
+  
+  .phi-grid {
     /* Scale down all spacing units by a factor of phi for mobile to preserve horizontal space */
     --space-xxs: calc(1rem * var(--phi-inv) * var(--phi-inv));
     --space-xs: calc(1rem * var(--phi-inv));
@@ -321,8 +329,9 @@ img {
 .nav-links.is-active {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
+  left: auto;
+  right: var(--space-md);
+  min-width: 280px;
   background-color: var(--color-bg-alt);
   border-bottom: 1px solid var(--color-lines);
   flex-direction: column;
