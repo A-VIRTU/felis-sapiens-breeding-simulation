@@ -208,9 +208,7 @@ img {
     padding: var(--space-lg) var(--space-sm);
   }
 
-  .data-canvas-wrapper {
-    padding: var(--space-xs);
-  }
+
 
   .video-observatory {
     width: 100vw;
@@ -227,7 +225,7 @@ img {
     left: 50%;
     margin-left: -50vw;
     border-radius: 0 !important;
-    padding: var(--space-lg) var(--space-sm);
+    padding: var(--space-xl) calc(4vw + var(--space-sm));
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
   }
