@@ -31,16 +31,16 @@
   --space-xl: calc(var(--space-lg) * var(--phi)); /* 6.854rem */
   --space-xxl: calc(var(--space-xl) * var(--phi)); /* 11.09rem */
 
-  /* Colors (Warm Luxury / Mediterranean Temperament) */
-  --color-bg: #FDF9F1;       /* Warm Cream / Ivory - much softer and inviting */
-  --color-bg-alt: #FFFFFF;   /* Pure White Canvas - retains high brightness */
-  --color-text: #2B211E;     /* Espresso / Warm Charcoal instead of cold Midnight Ink */
-  --color-accent: #C4623D;   /* Vibrant Terracotta / Rich Copper - brings temperament and life */
-  --color-accent-hover: #9E4A28;
-  --color-data-1: #2B5E45;   /* Deep lush Emerald (warmer green) */
-  --color-data-2: #728F7E;   /* Muted warm Emerald */
-  --color-data-3: #DDEBE3;   /* Warm Ice Emerald */
-  --color-lines: rgba(43, 33, 30, 0.1); 
+  /* Colors (Fjord / Skandi luxury) */
+  --color-bg: #F6F8FB;       /* Platinum White */
+  --color-bg-alt: #FFFFFF;   /* Pure White Canvas */
+  --color-text: #1A1A2E;     /* Midnight Opulence - Ink */
+  --color-accent: #A47764;   /* Mocha Mousse - Warm contrast */
+  --color-accent-hover: #8C6251;
+  --color-data-1: #2D5A4A;   /* Emerald / Sage for data */
+  --color-data-2: #849C91;   /* Muted Emerald */
+  --color-data-3: #D0DBD6;   /* Ice Emerald */
+  --color-lines: rgba(26, 26, 46, 0.1); 
 
   /* Layout Variables */
   --grid-max-w: 1600px;
@@ -378,8 +378,7 @@ img {
   display: flex;
   align-items: center;
   position: relative;
-  background: radial-gradient(circle at 80% 20%, rgba(196,98,61,0.06), var(--color-bg)),
-              radial-gradient(circle at 20% 80%, rgba(43,94,69,0.04), var(--color-bg));
+  background: radial-gradient(circle at 75% 25%, var(--color-bg-alt), var(--color-bg));
   overflow: hidden;
 }
 
@@ -781,7 +780,7 @@ textarea.form-control {
 .button {
   display: inline-block;
   padding: calc(var(--space-xxs) * 1.5) var(--space-sm);
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+  background-color: var(--color-accent);
   color: var(--color-bg-alt);
   font-family: var(--font-sans);
   font-size: var(--text-sm);
@@ -860,3 +859,12 @@ textarea.form-control {
     padding: var(--space-xl) calc(4vw + var(--space-sm)) !important;
   }
 }
+/* Theme Sections for Temperament and Rhythm */
+.theme-mocha { background-color: var(--color-accent); color: var(--color-bg-alt); padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+.theme-mocha h2, .theme-mocha h4, .theme-mocha p, .theme-mocha a:not(.button) { color: var(--color-bg-alt); }
+
+.theme-emerald { background-color: var(--color-data-1); color: var(--color-bg-alt); padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+.theme-emerald h2, .theme-emerald h4, .theme-emerald p, .theme-emerald a:not(.button) { color: var(--color-bg-alt); }
+
+.theme-midnight { background-color: var(--color-text); color: var(--color-bg-alt); padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+.theme-midnight h2, .theme-midnight h4, .theme-midnight p, .theme-midnight a:not(.button) { color: var(--color-bg-alt); }
