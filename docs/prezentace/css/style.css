@@ -868,3 +868,35 @@ textarea.form-control {
 
 .theme-midnight { background-color: var(--color-text); color: var(--color-bg-alt); padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
 .theme-midnight h2, .theme-midnight h4, .theme-midnight p, .theme-midnight a:not(.button) { color: var(--color-bg-alt); }
+
+/* Cinematic Hero Sequence */
+@keyframes cinematicTextFade {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cinematicLogoFade {
+  0% { opacity: 0; }
+  100% { opacity: 0.20; }
+}
+
+.anim-fade-in-1 {
+  opacity: 0;
+  animation: cinematicTextFade 1s var(--ease-cinematic) 0.2s forwards;
+}
+.anim-line-1 {
+  opacity: 0;
+  animation: cinematicTextFade 1.2s var(--ease-cinematic) 0.8s forwards;
+}
+.anim-line-2 {
+  opacity: 0;
+  animation: cinematicTextFade 1.2s var(--ease-cinematic) 2.2s forwards;
+}
+.anim-fade-in-2 {
+  opacity: 0;
+  animation: cinematicTextFade 1s var(--ease-cinematic) 3.5s forwards;
+}
+.hero .large-logo-bg.anim-logo {
+  opacity: 0;
+  animation: cinematicLogoFade 2s var(--ease-cinematic) 4.5s forwards;
+}
