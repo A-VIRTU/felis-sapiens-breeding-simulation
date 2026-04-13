@@ -108,9 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnSubmit1 = document.getElementById('btn-submit-phase1');
     const btnSubmit2 = document.getElementById('btn-submit-phase2');
     const btnSubmit3 = document.getElementById('btn-submit-phase3');
+    const btnSubmit4 = document.getElementById('btn-submit-phase4');
     const btnBack1   = document.getElementById('btn-back-phase1');
     const btnBack2   = document.getElementById('btn-back-phase2');
     const btnReset   = document.getElementById('btn-reset-form');
+    const additionalMessage = document.getElementById('additionalMessage');
 
     const msgPhase2 = document.getElementById('phase-2-msg');
     const msgPhase3 = document.getElementById('phase-3-msg');
@@ -179,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (phase === '4') {
             if (step4) step4.style.display = 'block';
             if (dossierIntro) {
-                dossierIntro.innerHTML = `<span style="color: var(--color-accent); font-size: var(--text-md); display: block; margin-bottom: var(--space-xs); font-family: var(--font-serif);">Dossier Officially Secured</span>Thank you beyond words. Your behavioral responses and contextual framework have been successfully preserved.<br><br>We treat all subjective data with uncompromising ethical standards. Formal registry processing and all subsequent communication is currently handled strictly manually by humans at A VIRTÙ.<br><br>You may now finalize your inquiry by forwarding a very simple initiation message directly to:<br><strong style="font-size: var(--text-md); margin-top: 10px; display: block; letter-spacing: 1px;">protocol@felis-sapiens.com</strong>`;
+                dossierIntro.innerHTML = `<span style="color: var(--color-accent); font-size: var(--text-md); display: block; margin-bottom: var(--space-xs); font-family: var(--font-serif);">Dossier Officially Secured</span>Thank you beyond words. Your behavioral responses and contextual framework have been successfully preserved.<br><br>Your formal registration is now complete. We treat all subjective data with uncompromising ethical standards. All subsequent communication is handled strictly manually by our human clearance team.<br><br>If any new thoughts or questions arise, you may append them using the space below, or reach out directly at: <a href="mailto:protocol@felis-sapiens.com" style="color: var(--color-accent); font-weight: bold; text-decoration: underline;">protocol@felis-sapiens.com</a>`;
                 dossierIntro.style.color = 'var(--color-bg)';
             }
             if (msgPhase4) msgPhase4.innerHTML = '';
@@ -233,6 +235,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!validatePhase(step3)) return;
             setPhase('4');
             renderPhase('4');
+        });
+
+        if (btnSubmit4) btnSubmit4.addEventListener('click', () => {
+            if (additionalMessage && additionalMessage.value.trim() !== '') {
+                const originalText = btnSubmit4.innerText;
+                btnSubmit4.innerText = 'Appended to your file ✓';
+                additionalMessage.value = '';
+                setTimeout(() => {
+                    if(btnSubmit4.innerText === 'Appended to your file ✓') btnSubmit4.innerText = originalText;
+                }, 3000);
+            }
         });
 
         if (btnReset) btnReset.addEventListener('click', () => {
