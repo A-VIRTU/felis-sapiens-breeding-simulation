@@ -793,6 +793,29 @@ textarea.form-control {
   box-shadow: 0 10px 30px rgba(26,26,46,0.25);
 }
 
+/* Partner Tiles */
+.partner-tile {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  background-color: #ffffff;
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid rgba(26,26,46,0.05);
+  box-shadow: 0 4px 15px rgba(26,26,46,0.03);
+  transition: all 0.4s var(--ease-cinematic);
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(26,26,46,0.08);
+  border-color: rgba(26,26,46,0.15);
+}
+
 /* Animations */
 .animate-on-scroll {
   opacity: 0;
