@@ -827,3 +827,14 @@ textarea.form-control {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Force mobile breakout geometry overrides */
+@media (max-width: 768px) {
+  .conversion-panel.dossier-panel-wrapper {
+    margin-left: calc(-4vw - var(--space-sm)) !important;
+    margin-right: calc(-4vw - var(--space-sm)) !important;
+    width: calc(100% + 8vw + (2 * var(--space-sm))) !important;
+    padding: var(--space-xl) calc(4vw + var(--space-sm)) !important;
+    border-radius: 0 !important;
+  }
+}
